@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { Music2, Headphones, Youtube, Apple } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,30 +11,42 @@ const Footer = () => {
               © 2025 Odhil3. All rights reserved.
             </p>
           </div>
-          <div className="flex space-x-6">
+
+          <div className="flex flex-wrap justify-center md:justify-end gap-6">
             <a 
               href="https://music.youtube.com/channel/UCn_0rMWCXt0W4wNPuIT7_ww" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 transition-colors"
+              className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
             >
-              Youtube Music
+              <Music2 size={18} /> YouTube Music
             </a>
+
             <a 
-              href="https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=7SaCH8PjTK6d0wSCydXvaA%0A&nd=1&dlsi=3b1e15cef481475c&flow_ctx=035771b0-dd4e-49db-955f-b096fc68a35e%3A1744643798#login" 
+              href="https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=7SaCH8PjTK6d0wSCydXvaA&nd=1&dlsi=3b1e15cef481475c" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 transition-colors"
+              className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
             >
-              Spotify
+              <Headphones size={18} /> Spotify
             </a>
+
+            <a 
+              href="https://music.apple.com/your-apple-music-url-here" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
+            >
+              <Apple size={18} /> Apple Music
+            </a>
+
             <a 
               href="https://www.youtube.com/results?search_query=odhil3" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-yellow-400 transition-colors"
+              className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
             >
-              YouTube
+              <Youtube size={18} /> YouTube
             </a>
           </div>
         </div>

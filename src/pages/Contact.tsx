@@ -1,27 +1,58 @@
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    message_type: 'Booking', // Default dropdown value
   });
+  const [status, setStatus] = useState(null); // For success/error messages
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thanks for reaching out! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', message: '' });
+
+    // Client-side validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus({ type: 'error', message: 'Please fill all required fields' });
+      return;
+    }
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      setStatus({ type: 'error', message: 'Please enter a valid email address' });
+      return;
+    }
+
+    // Send form data via EmailJS
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setStatus({ type: 'success', message: 'Message sent successfully!' });
+          setFormData({ name: '', email: '', message: '', message_type: 'Booking' });
+          setTimeout(() => navigate('/thank-you'), 2000); // Redirect after 2 seconds
+        },
+        (error) => {
+          setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+          console.error('EmailJS error:', error);
+        }
+      );
   };
 
   return (
@@ -38,9 +69,20 @@ const Contact = () => {
               {/* Contact Form */}
               <div className="bg-gray-900 rounded-lg p-8 border border-yellow-500/20">
                 <h2 className="text-2xl font-bold text-yellow-400 mb-6 font-montserrat">Send a Message</h2>
+                {status && (
+                  <div
+                    className={`mb-4 p-3 rounded-lg text-center ${
+                      status.type === 'success' ? 'bg-green-800 text-green-200' : 'bg-red-800 text-red-200'
+                    }`}
+                  >
+                    {status.message}
+                  </div>
+                )}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-gray-300 mb-2">Name</label>
+                    <label htmlFor="name" className="block text-gray-300 mb-2">
+                      Name
+                    </label>
                     <input
                       type="text"
                       id="name"
@@ -50,10 +92,13 @@ const Contact = () => {
                       required
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors"
                       placeholder="Your name"
+                      aria-required="true"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-gray-300 mb-2">Email</label>
+                    <label htmlFor="email" className="block text-gray-300 mb-2">
+                      Email
+                    </label>
                     <input
                       type="email"
                       id="email"
@@ -63,10 +108,31 @@ const Contact = () => {
                       required
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors"
                       placeholder="your@email.com"
+                      aria-required="true"
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
+                    <label htmlFor="message_type" className="block text-gray-300 mb-2">
+                      Message Type
+                    </label>
+                    <select
+                      id="message_type"
+                      name="message_type"
+                      value={formData.message_type}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors"
+                      aria-required="true"
+                    >
+                      <option value="Booking">Booking</option>
+                      <option value="Collaboration">Collaboration</option>
+                      <option value="Fan Message">Fan Message</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="block text-gray-300 mb-2">
+                      Message
+                    </label>
                     <textarea
                       id="message"
                       name="message"
@@ -76,6 +142,7 @@ const Contact = () => {
                       required
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors resize-vertical"
                       placeholder="Your message..."
+                      aria-required="true"
                     ></textarea>
                   </div>
                   <button
@@ -87,33 +154,8 @@ const Contact = () => {
                 </form>
               </div>
 
-              {/* Contact Info */}
+              {/* Social Media */}
               <div className="space-y-8">
-                <div className="bg-gray-900 rounded-lg p-8 border border-yellow-500/20">
-                  <h2 className="text-2xl font-bold text-yellow-400 mb-6 font-montserrat">Bookings & Collaborations</h2>
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-                      <a 
-                        href="mailto:bookings@odhil3.com" 
-                        className="text-yellow-400 hover:text-yellow-300 transition-colors"
-                      >
-                        bookings@odhil3.com
-                      </a>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">Management</h3>
-                      <a 
-                        href="mailto:management@odhil3.com" 
-                        className="text-yellow-400 hover:text-yellow-300 transition-colors"
-                      >
-                        management@odhil3.com
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Social Media */}
                 <div className="bg-gray-900 rounded-lg p-8 border border-yellow-500/20">
                   <h2 className="text-2xl font-bold text-yellow-400 mb-6 font-montserrat">Follow Me</h2>
                   <div className="space-y-4">
@@ -124,7 +166,7 @@ const Contact = () => {
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
                     >
                       <span className="text-lg">📱</span>
-                      <span>Youtube Music</span>
+                      <span>Instagram</span>
                     </a>
                     <a 
                       href="https://tiktok.com/@odhil3" 
@@ -133,7 +175,7 @@ const Contact = () => {
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
                     >
                       <span className="text-lg">🎵</span>
-                      <span>Spotify</span>
+                      <span>TikTok</span>
                     </a>
                     <a 
                       href="https://youtube.com/@odhil3" 

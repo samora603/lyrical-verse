@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -9,6 +8,7 @@ import Music from "./pages/Music";
 import Videos from "./pages/Videos";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ThankYou from './pages/ThankYou';
 
 const queryClient = new QueryClient();
 
@@ -23,7 +23,8 @@ const App = () => (
           <Route path="/music" element={<Music />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/contact" element={<Contact />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/thank-you" element={<ThankYou />} />
+          {/* Catch-all route should always be last */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

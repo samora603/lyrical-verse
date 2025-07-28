@@ -4,19 +4,19 @@ import React from 'react';
 const ImageGallery = () => {
   const images = [
     {
-      src: '/lovable-uploads/b04080d6-61cd-406c-9c4b-7cf78e7ab652.png',
+      src: '/lovable-uploads/image 1.png',
       alt: 'Odhil3 urban shot'
     },
     {
-      src: '/lovable-uploads/eb7b2324-753c-4013-8517-c2a3676c5530.png',
+      src: '/lovable-uploads/image 2.png',
       alt: 'Odhil3 studio session'
     },
     {
-      src: '/lovable-uploads/631d6250-cae9-4404-a2f9-cc453587e6ba.png',
+      src: '/lovable-uploads/image 3.png',
       alt: 'Odhil3 night shot'
     },
     {
-      src: '/lovable-uploads/aa54638d-8fa9-4130-a928-01494cec2e37.png',
+      src: '/lovable-uploads/image 4.png',
       alt: 'Odhil3 in car'
     }
   ];
