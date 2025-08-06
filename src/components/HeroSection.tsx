@@ -82,7 +82,7 @@ const HeroSection = () => {
         {/* Add AlbumCard component just below social icons */}
         <AlbumCard 
           albumName="Re-Glock"
-          albumCover="/lovable-uploads/image 3.png" // Replace with your actual album cover image path in the public folder
+          albumCover="/lovable-uploads/album cover.png" // Replace with your actual album cover image path in the public folder
           preSaveLink="https://linkfire.com/presave" // Replace with your actual Spotify pre-save link (e.g., from Linkfire or Feature.fm)
         />
       </div>

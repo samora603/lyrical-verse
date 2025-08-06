@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -44,6 +43,16 @@ const Navbar = () => {
           }`}
         >
           Videos
+        </Link>
+        <Link 
+          to="/merch" 
+          className={`text-white text-base transition-all duration-300 font-montserrat ${
+            isActive('/merch') 
+              ? 'text-yellow-400 border-b-2 border-yellow-400' 
+              : 'hover:text-yellow-400 hover:shadow-sm hover:shadow-yellow-500/25'
+          }`}
+        >
+          Merch
         </Link>
         <Link 
           to="/contact" 

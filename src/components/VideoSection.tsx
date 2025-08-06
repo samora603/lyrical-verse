@@ -28,12 +28,6 @@ const VideoSection = () => {
     }
   ];
 
-  // Extract video ID from full URL
-  const getVideoId = (url) => {
-    const urlParams = new URLSearchParams(new URL(url).search);
-    return urlParams.get('v');
-  };
-
   return (
     <section className="bg-gray-900 text-white py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
@@ -45,16 +39,16 @@ const VideoSection = () => {
         </p>
         
         <div className="mb-12 bg-black rounded-lg p-6 border border-yellow-500/20 hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300">
-          <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center">
+          <div className="aspect-video bg-gray-800 rounded-lg overflow-hidden">
             <iframe
               width="100%"
               height="100%"
-              src={`https://www.youtube.com/embed/${getVideoId(videos[0].youtubeId)}`}
-              title={videos[0].title}
+              src="https://www.youtube.com/embed/NrZ6R21n2CE"
+              title="Odhil3 - Featured Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              className="rounded-lg"
+              className="w-full h-full"
             ></iframe>
           </div>
         </div>

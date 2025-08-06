@@ -8,7 +8,8 @@ import Music from "./pages/Music";
 import Videos from "./pages/Videos";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import ThankYou from './pages/ThankYou';
+import ThankYou from "./pages/ThankYou";
+import Merch from "./pages/Merch"; // ✅ Fixed import path
 
 const queryClient = new QueryClient();
 
@@ -24,7 +25,7 @@ const App = () => (
           <Route path="/videos" element={<Videos />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />
-          {/* Catch-all route should always be last */}
+          <Route path="/merch" element={<Merch />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

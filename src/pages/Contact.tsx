@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { FaInstagram, FaTiktok, FaPhoneAlt } from 'react-icons/fa';
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -10,9 +11,9 @@ const Contact = () => {
     name: '',
     email: '',
     message: '',
-    message_type: 'Booking', // Default dropdown value
+    message_type: 'Booking',
   });
-  const [status, setStatus] = useState(null); // For success/error messages
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,7 +25,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Client-side validation
     if (!formData.name || !formData.email || !formData.message) {
       setStatus({ type: 'error', message: 'Please fill all required fields' });
       return;
@@ -34,7 +34,6 @@ const Contact = () => {
       return;
     }
 
-    // Send form data via EmailJS
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -46,7 +45,7 @@ const Contact = () => {
         () => {
           setStatus({ type: 'success', message: 'Message sent successfully!' });
           setFormData({ name: '', email: '', message: '', message_type: 'Booking' });
-          setTimeout(() => navigate('/thank-you'), 2000); // Redirect after 2 seconds
+          setTimeout(() => navigate('/thank-you'), 2000);
         },
         (error) => {
           setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
@@ -64,7 +63,7 @@ const Contact = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-montserrat bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
               Get in Touch
             </h1>
-            
+
             <div className="grid md:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div className="bg-gray-900 rounded-lg p-8 border border-yellow-500/20">
@@ -165,7 +164,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
                     >
-                      <span className="text-lg">📱</span>
+                      <FaInstagram className="text-xl" />
                       <span>Instagram</span>
                     </a>
                     <a 
@@ -174,21 +173,20 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
                     >
-                      <span className="text-lg">🎵</span>
+                      <FaTiktok className="text-xl" />
                       <span>TikTok</span>
                     </a>
                     <a 
-                      href="https://youtube.com/@odhil3" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                      href="tel:+254712345678" 
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
                     >
-                      <span className="text-lg">📺</span>
-                      <span>YouTube</span>
+                      <FaPhoneAlt className="text-xl" />
+                      <span>+254 712 345 678</span>
                     </a>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </section>

@@ -7,7 +7,7 @@ const Videos = () => {
     {
       id: 1,
       title: "Odhil3 - Latest Rap Track",
-      youtubeId: "https://www.youtube.com/watch?v=Clon1jNqY60&list=RDClon1jNqY60&start_radio=1",
+      youtubeId: "https://www.youtube.com/watch?v=NrZ6R21n2CE&list=RDNrZ6R21n2CE&start_radio=1",
       caption: "Official music video release"
     },
     {
@@ -27,10 +27,15 @@ const Videos = () => {
       title: "broker",
       youtubeId: "https://www.youtube.com/watch?v=TP-rt6H1SLY&list=RDTP-rt6H1SLY&start_radio=1",
       caption: "Deep dive into the lyrics"
+    },
+    {
+      id: 5,
+      title: "Mambo ya Dunia",
+      youtubeId: "https://www.youtube.com/watch?v=aN4_0ueavAM&list=RDaN4_0ueavAM&start_radio=1",
+      caption: "Deep dive into the lyrics"
     }
   ];
 
-  // Extract video ID from full URL
   const getVideoId = (url) => {
     const urlParams = new URLSearchParams(new URL(url).search);
     return urlParams.get('v');
@@ -45,7 +50,7 @@ const Videos = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 font-montserrat bg-gradient-to-r from-yellow-400 to-amber-500 bg-clip-text text-transparent">
               Videos
             </h1>
-            
+
             {/* Featured Video */}
             <div className="mb-16">
               <div className="bg-gray-900 rounded-lg p-6 border border-yellow-500/20">

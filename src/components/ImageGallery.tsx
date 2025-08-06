@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const ImageGallery = () => {
@@ -18,6 +17,14 @@ const ImageGallery = () => {
     {
       src: '/lovable-uploads/image 4.png',
       alt: 'Odhil3 in car'
+    },
+    {
+      src: '/lovable-uploads/image 5.png',
+      alt: 'Odhil3 live performance'
+    },
+    {
+      src: '/lovable-uploads/image 6.png',
+      alt: 'Odhil3 street vibes'
     }
   ];
 
@@ -28,7 +35,7 @@ const ImageGallery = () => {
           Gallery
         </h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-4">
           {images.map((image, index) => (
             <div 
               key={index} 
