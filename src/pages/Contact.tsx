@@ -159,7 +159,7 @@ const Contact = () => {
                   <h2 className="text-2xl font-bold text-yellow-400 mb-6 font-montserrat">Follow Me</h2>
                   <div className="space-y-4">
                     <a 
-                      href="https://instagram.com/odhil3" 
+                      href="https://www.instagram.com/spotboimafia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
@@ -168,7 +168,7 @@ const Contact = () => {
                       <span>Instagram</span>
                     </a>
                     <a 
-                      href="https://tiktok.com/@odhil3" 
+                      href="https://www.tiktok.com/@odhil3_?_t=ZM-8ybl7usOupU&_r=1" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
