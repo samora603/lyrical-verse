@@ -8,7 +8,7 @@ const HeroSection = () => {
     youtubeMusic: 'https://music.youtube.com/channel/UCn_0rMWCXt0W4wNPuIT7_ww',
     spotify: 'https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=7SaCH8PjTK6d0wSCydXvaA',
     youtube: 'https://www.youtube.com/results?search_query=odhil3',
-    appleMusic: 'https://music.apple.com/your-apple-music-url-here', // ← Replace with your real link
+    appleMusic: 'https://music.apple.com/ke/artist/odhil3/1807177168', // ← Replace with your real link
   };
 
   return (

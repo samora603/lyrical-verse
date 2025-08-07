@@ -4,30 +4,44 @@ import Footer from '../components/Footer';
 import { FaSpotify, FaYoutube, FaApple, FaHeadphones } from 'react-icons/fa';
 
 const Music = () => {
-  const singles = Array.from({ length: 10 }, (_, i) => ({
-    id: i + 1,
-    title: `Track ${i + 1}`,
-    spotifyLink: `https://open.spotify.com/track/placeholder${i + 1}`,
-    youtubeMusicLink: `https://music.youtube.com/watch?v=placeholder${i + 1}`,
-    appleMusicLink: `https://music.apple.com/track/placeholder${i + 1}`,
-  }));
+const singleTrackNames = [
+  "Siingizii",
+  "Broker",
+  "Mambo ya Dunia (feat. Gizmo & Odhil3) ",
+  "Forgetful",
+  "Steeze",
+  "MASHALLAH(feat. Gizmo)",
+  "ugly",
+  "aura reloaded",
+  "lighter",
+  "check yourself"
+];
+
+const singles = singleTrackNames.map((title, i) => ({
+  id: i + 1,
+  title,
+  spotifyLink: `https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=UPyqdcFtR9ifsNJk7fw1sw${i + 1}`,
+  youtubeMusicLink: `https://music.youtube.com/channel/UCn_0rMWCXt0W4wNPuIT7_ww?si=pezsS_o5aEYzR9F2${i + 1}`,
+  appleMusicLink: `https://music.apple.com/ke/artist/odhil3/1807177168${i + 1}`,
+}));
+
 
   const albums = [
     {
       id: 1,
-      title: "Album One",
+      title: "Re-Glock",
       cover: "/lovable-uploads/album cover.png",
-      spotifyLink: 'https://open.spotify.com/album/placeholderA',
-      youtubeMusicLink: 'https://music.youtube.com/playlist?list=placeholderA',
-      appleMusicLink: 'https://music.apple.com/album/placeholderA',
+      spotifyLink: 'https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=S-HzJ9XlTLyRO3x0qNTb-A',
+      youtubeMusicLink: 'https://music.youtube.com/channel/UCn_0rMWCXt0W4wNPuIT7_ww?si=8tJ6VhwIanUudeux',
+      appleMusicLink: 'https://music.apple.com/ke/artist/odhil3/1807177168',
     },
     {
       id: 2,
-      title: "Album Two",
+      title: "PEDI-cure",
       cover: "/lovable-uploads/image 3.png",
-      spotifyLink: 'https://open.spotify.com/album/placeholderB',
-      youtubeMusicLink: 'https://music.youtube.com/playlist?list=placeholderB',
-      appleMusicLink: 'https://music.apple.com/album/placeholderB',
+      spotifyLink: 'https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=zqx_3QK-S56ftbL50wklWQ',
+      youtubeMusicLink: 'https://music.youtube.com/channel/UCn_0rMWCXt0W4wNPuIT7_ww?si=8tJ6VhwIanUudeux',
+      appleMusicLink: 'https://music.apple.com/ke/artist/odhil3/1807177168',
     },
   ];
 
@@ -116,3 +130,5 @@ const Music = () => {
 };
 
 export default Music;
+
+

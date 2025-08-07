@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
 
             <a 
-              href="https://music.apple.com/your-apple-music-url-here" 
+              href="https://music.apple.com/ke/artist/odhil3/1807177168" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"

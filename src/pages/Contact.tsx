@@ -181,7 +181,7 @@ const Contact = () => {
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
                     >
                       <FaPhoneAlt className="text-xl" />
-                      <span>+254 712 345 678</span>
+                      <span>+254 705 820 422</span>
                     </a>
                   </div>
                 </div>
