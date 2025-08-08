@@ -177,7 +177,7 @@ const Contact = () => {
                       <span>TikTok</span>
                     </a>
                     <a 
-                      href="tel:+254712345678" 
+                      href="tel:+254705820422" 
                       className="flex items-center space-x-3 text-white hover:text-yellow-400 transition-colors"
                     >
                       <FaPhoneAlt className="text-xl" />
