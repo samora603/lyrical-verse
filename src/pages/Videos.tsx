@@ -7,7 +7,7 @@ const Videos = () => {
     {
       id: 1,
       title: "Odhil3 - Latest Rap Track",
-      youtubeId: "https://www.youtube.com/watch?v=NrZ6R21n2CE&list=RDNrZ6R21n2CE&start_radio=1",
+      youtubeId: "https://www.youtube.com/watch?v=UBg4yTmFOlE&list=RDUBg4yTmFOlE&start_radio=1",
       caption: "Official music video release"
     },
     {

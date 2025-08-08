@@ -5,7 +5,7 @@ const VideoSection = () => {
     {
       id: 1,
       title: "Odhil3 - Latest Rap Track",
-      youtubeId: "https://www.youtube.com/watch?v=Clon1jNqY60&list=RDClon1jNqY60&start_radio=1",
+      youtubeId: "https://www.youtube.com/watch?v=UBg4yTmFOlE&list=RDUBg4yTmFOlE&start_radio=1",
       caption: "Official music video release"
     },
     {
@@ -43,7 +43,7 @@ const VideoSection = () => {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/NrZ6R21n2CE"
+              src="https://www.youtube.com/watch?v=UBg4yTmFOlE&list=RDUBg4yTmFOlE&start_radio=1"
               title="Odhil3 - Featured Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -1,29 +1,18 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-// import './MerchPage.css';
 
-const products = [
+const featuredProducts = [
   {
     id: 1,
     name: 'Classic Dickies Shirt',
-    description: 'Premium black Dickies shirt',
+    description: 'Premium Dickies shirt',
     price: 'KES 1,000',
     image: '/lovable-uploads/Dickies 1.png',
     isAvailable: true,
   },
   {
-    id: 2,
-    name: 'Custom Dickies Shirt',
-    description: 'Limited edition Dickies Shirt',
-    price: 'KES 1,000',
-    image: '/lovable-uploads/Dickies 2.png',
-    isAvailable: true,
-  },
-  {
     id: 3,
     name: 'Signature Hoodie',
-    description: 'Very Rare hoodie',
+    description: 'Cozy hoodie ',
     price: 'KES 1,500',
     image: '/lovable-uploads/Hoodie 1.png',
     isAvailable: true,
@@ -31,27 +20,19 @@ const products = [
   {
     id: 4,
     name: 'Very Rare Hoodie',
-    description: 'Bold hoodie .',
+    description: 'Bold hoodie',
     price: 'KES 1,500',
     image: '/lovable-uploads/Hoodie 2.png',
     isAvailable: true,
   },
-  {
-    id: 5,
-    name: 'Premium Hoodie',
-    description: 'Luxury hoodie ',
-    price: 'KES 1,500',
-    image: '/lovable-uploads/Hoodie 3.png',
-    isAvailable: true,
-  },
 ];
 
-const MerchPage = () => {
+const MerchSection = () => {
   const whatsappNumber = '<your_whatsapp_number>'; // Replace with your WhatsApp number
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi! I'm interested in your merch.`;
 
   return (
-    <div className="merch-page bg-black min-h-screen text-white flex flex-col">
+    <section className="merch-section bg-black py-12 text-white">
       <style>
         {`
           .card-hover:hover {
@@ -62,7 +43,7 @@ const MerchPage = () => {
             opacity: 0.6;
           }
           .out-of-stock::after {
-            content: 'Inside Stock';
+            content: 'Out of Stock';
             position: absolute;
             top: 8px;
             right: 8px;
@@ -74,19 +55,10 @@ const MerchPage = () => {
           }
         `}
       </style>
-
-      {/* Navbar */}
-      <Navbar />
-
-      {/* Hero Banner */}
-      <div className="hero-banner bg-black py-12 text-center">
-        <h1 className="text-5xl font-bold text-yellow-400"></h1>
-      </div>
-
-      {/* Product Grid */}
-      <div className="container mx-auto px-4 py-8 flex-grow">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-yellow-400 text-center mb-8">Featured Merch</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product) => (
+          {featuredProducts.map((product) => (
             <div
               key={product.id}
               className={`product-card border-2 border-yellow-400 rounded-lg p-4 transition-all duration-300 ${
@@ -105,8 +77,8 @@ const MerchPage = () => {
                   </span>
                 )}
               </div>
-              <h2 className="text-2xl font-semibold text-yellow-400 mt-4">{product.name}</h2>
-              <p className="text-white mt thermos-2">{product.description}</p>
+              <h3 className="text-2xl font-semibold text-yellow-400 mt-4">{product.name}</h3>
+              <p className="text-white mt-2">{product.description}</p>
               <p className="text-yellow-400 font-bold mt-2">{product.price}</p>
               <a
                 href={whatsappLink}
@@ -119,12 +91,17 @@ const MerchPage = () => {
             </div>
           ))}
         </div>
+        <div className="text-center mt-8">
+          <a
+            href="/merch"
+            className="inline-block bg-yellow-400 text-black font-semibold py-2 px-6 rounded hover:bg-yellow-500 transition-colors"
+          >
+            View All Merch
+          </a>
+        </div>
       </div>
-
-      {/* Footer */}
-      <Footer />
-    </div>
+    </section>
   );
 };
 
-export default MerchPage;
+export default MerchSection;

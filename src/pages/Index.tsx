@@ -1,7 +1,7 @@
-
 import React from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import MerchSection from '../components/MerchSection';
 import ImageGallery from '../components/ImageGallery';
 import MusicSection from '../components/MusicSection';
 import VideoSection from '../components/VideoSection';
@@ -10,10 +10,11 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-black flex flex-col">
       <Navbar />
       <HeroSection />
       <ImageGallery />
+      <MerchSection />
       <MusicSection />
       <VideoSection />
       <ContactSection />
