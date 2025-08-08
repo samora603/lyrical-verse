@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Youtube, Music2, Apple, Headphones } from 'lucide-react';
-import AlbumCard from './AlbumCard'; // Import the new AlbumCard component
 
 const HeroSection = () => {
   const socialLinks = {
     youtubeMusic: 'https://music.youtube.com/channel/UCn_0rMWCXt0W4wNPuIT7_ww',
     spotify: 'https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=7SaCH8PjTK6d0wSCydXvaA',
     youtube: 'https://www.youtube.com/results?search_query=odhil3',
-    appleMusic: 'https://music.apple.com/ke/artist/odhil3/1807177168', // ← Replace with your real link
+    appleMusic: 'https://music.apple.com/ke/artist/odhil3/1807177168',
+    preSave: 'https://linkfire.com/presave' // Pre-save link
   };
 
   return (
@@ -44,7 +44,7 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-white mb-2">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 text-white mb-4">
           <a 
             href={socialLinks.youtubeMusic} 
             target="_blank" 
@@ -79,12 +79,15 @@ const HeroSection = () => {
           </a>
         </div>
 
-        {/* Add AlbumCard component just below social icons */}
-        <AlbumCard 
-          albumName="Re-Glock"
-          albumCover="/lovable-uploads/album cover.png" // Replace with your actual album cover image path in the public folder
-          preSaveLink="https://linkfire.com/presave" // Replace with your actual Spotify pre-save link (e.g., from Linkfire or Feature.fm)
-        />
+        {/* Pre-Save Button */}
+        <a
+          href={socialLinks.preSave}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black px-6 py-3 rounded-full text-base font-bold transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/25 hover:scale-105"
+        >
+          Pre-Save Now
+        </a>
       </div>
     </section>
   );

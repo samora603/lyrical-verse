@@ -31,9 +31,9 @@ const singles = singleTrackNames.map((title, i) => ({
       id: 1,
       title: "Re-Glock",
       cover: "/lovable-uploads/album cover.png",
-      spotifyLink: 'https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=S-HzJ9XlTLyRO3x0qNTb-A',
-      youtubeMusicLink: 'https://music.youtube.com/channel/UCn_0rMWCXt0W4wNPuIT7_ww?si=8tJ6VhwIanUudeux',
-      appleMusicLink: 'https://music.apple.com/ke/artist/odhil3/1807177168',
+      spotifyLink: 'https://open.spotify.com/album/5Z4fUoXBSPoyroiJ394722?si=36RzrU7tSriGZLnF4NSEIA',
+      youtubeMusicLink: 'https://music.youtube.com/playlist?list=OLAK5uy_lm0Fp8oIoNuI3bn6rObYusJCn_s-DJ2QE&si=pl9CsCcemJ-T2BS0',
+      appleMusicLink: 'https://music.apple.com/ke/album/re-glock/1831228827',
     },
     {
       id: 2,
