@@ -87,41 +87,42 @@ const singles = singleTrackNames.map((title, i) => ({
             </div>
           </div>
 
-          {/* 💿 ALBUMS SECTION */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Albums</h2>
-            <div className="flex flex-wrap gap-8 justify-center">
-              {albums.map((album) => (
-                <div
-                  key={album.id}
-                  className="w-full sm:w-[340px] bg-gray-900 p-6 rounded-lg border border-yellow-500/20 hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300 group"
-                >
-                  <div className="overflow-hidden rounded-lg mb-4">
-                    <img
-                      src={album.cover}
-                      alt={album.title}
-                      className="w-full h-60 object-cover rounded-lg transform transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-center">{album.title}</h3>
-                  <div className="flex flex-col gap-3">
-                    <a href={album.spotifyLink} target="_blank" rel="noopener noreferrer" className="platform-btn">
-                      <FaSpotify className="w-5 h-5" />
-                      Spotify
-                    </a>
-                    <a href={album.youtubeMusicLink} target="_blank" rel="noopener noreferrer" className="platform-btn">
-                      <FaYoutube className="w-5 h-5" />
-                      YouTube Music
-                    </a>
-                    <a href={album.appleMusicLink} target="_blank" rel="noopener noreferrer" className="platform-btn">
-                      <FaApple className="w-5 h-5" />
-                      Apple Music
-                    </a>
-                  </div>
-                </div>
-              ))}
+    {/* 💿 ALBUMS SECTION */}
+    <div>
+      <h2 className="text-3xl font-bold mb-6">Albums</h2>
+      <div className="flex flex-wrap gap-8 justify-center">
+        {albums.map((album) => (
+          <div
+            key={album.id}
+            className="w-full sm:w-[340px] bg-gray-900 p-6 rounded-lg border border-yellow-500/20 hover:shadow-lg hover:shadow-yellow-500/25 transition-all duration-300 group"
+          >
+            <div className="overflow-hidden rounded-lg mb-4 flex justify-center items-center bg-black">
+              <img
+                src={album.cover}
+                alt={album.title}
+                className="w-full max-h-80 object-contain rounded-lg transform transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-center">{album.title}</h3>
+            <div className="flex flex-col gap-3">
+              <a href={album.spotifyLink} target="_blank" rel="noopener noreferrer" className="platform-btn">
+                <FaSpotify className="w-5 h-5" />
+                Spotify
+              </a>
+              <a href={album.youtubeMusicLink} target="_blank" rel="noopener noreferrer" className="platform-btn">
+                <FaYoutube className="w-5 h-5" />
+                YouTube Music
+              </a>
+              <a href={album.appleMusicLink} target="_blank" rel="noopener noreferrer" className="platform-btn">
+                <FaApple className="w-5 h-5" />
+                Apple Music
+              </a>
             </div>
           </div>
+        ))}
+      </div>
+    </div>
+
         </section>
       </main>
       <Footer />
