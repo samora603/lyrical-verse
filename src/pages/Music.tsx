@@ -38,7 +38,7 @@ const singles = singleTrackNames.map((title, i) => ({
     {
       id: 2,
       title: "PEDI-cure",
-      cover: "/lovable-uploads/image 3.png",
+      cover: "/lovable-uploads/Pedi-cure.png",
       spotifyLink: 'https://open.spotify.com/album/5b0ppL3cibNd8CNEc5CYl7?si=zqx_3QK-S56ftbL50wklWQ',
       youtubeMusicLink: 'https://music.youtube.com/channel/UCn_0rMWCXt0W4wNPuIT7_ww?si=8tJ6VhwIanUudeux',
       appleMusicLink: 'https://music.apple.com/ke/artist/odhil3/1807177168',
