@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-// import './MerchPage.css';
 
 const products = [
   {
@@ -31,7 +30,7 @@ const products = [
   {
     id: 4,
     name: 'Very Rare Hoodie',
-    description: 'Bold hoodie .',
+    description: 'Bold hoodie.',
     price: 'KES 1,850',
     image: '/lovable-uploads/Hoodie 2.png',
     isAvailable: true,
@@ -39,15 +38,15 @@ const products = [
   {
     id: 5,
     name: 'Premium Hoodie',
-    description: 'Luxury hoodie ',
+    description: 'Luxury hoodie',
     price: 'KES 1,850',
     image: '/lovable-uploads/Hoodie 3.png',
     isAvailable: true,
   },
-    {
+  {
     id: 6,
     name: 'Rare Hoodie',
-    description: 'Classic hoodie ',
+    description: 'Classic hoodie',
     price: 'KES 1,850',
     image: '/lovable-uploads/Hoodie 4.png',
     isAvailable: true,
@@ -55,8 +54,12 @@ const products = [
 ];
 
 const MerchPage = () => {
-  const whatsappNumber = '<+254712890778>'; // Replace with your WhatsApp number
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi! I'm interested in your merch.`;
+  const whatsappNumber = '254712890778'; // No + or spaces
+
+  const createWhatsAppLink = (productName) => {
+    const message = `Hi! I'm interested in your merch: ${productName}`;
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  };
 
   return (
     <div className="merch-page bg-black min-h-screen text-white flex flex-col">
@@ -114,10 +117,10 @@ const MerchPage = () => {
                 )}
               </div>
               <h2 className="text-2xl font-semibold text-yellow-400 mt-4">{product.name}</h2>
-              <p className="text-white mt thermos-2">{product.description}</p>
+              <p className="text-white mt-2">{product.description}</p>
               <p className="text-yellow-400 font-bold mt-2">{product.price}</p>
               <a
-                href={whatsappLink}
+                href={createWhatsAppLink(product.name)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block mt-4 bg-yellow-400 text-black font-semibold py-2 px-4 rounded hover:bg-yellow-500 transition-colors"

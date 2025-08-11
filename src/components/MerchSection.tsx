@@ -12,7 +12,7 @@ const featuredProducts = [
   {
     id: 3,
     name: 'Signature Hoodie',
-    description: 'Cozy hoodie ',
+    description: 'Cozy hoodie',
     price: 'KES 1,500',
     image: '/lovable-uploads/Hoodie 1.png',
     isAvailable: true,
@@ -23,13 +23,17 @@ const featuredProducts = [
     description: 'Bold hoodie',
     price: 'KES 1,500',
     image: '/lovable-uploads/Hoodie 2.png',
-    isAvailable: true,
+    isAvailable: true, // example out-of-stock
   },
 ];
 
 const MerchSection = () => {
-  const whatsappNumber = '<your_whatsapp_number>'; // Replace with your WhatsApp number
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi! I'm interested in your merch.`;
+  const whatsappNumber = '254712890778'; // No + or spaces
+
+  const whatsappLink = (productName) => {
+    const message = `Hi! I'm interested in your merch: ${productName}`;
+    return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  };
 
   return (
     <section className="merch-section bg-black py-12 text-white">
@@ -41,17 +45,6 @@ const MerchSection = () => {
           }
           .out-of-stock {
             opacity: 0.6;
-          }
-          .out-of-stock::after {
-            content: 'Out of Stock';
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            background-color: #FFD700;
-            color: black;
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 4px;
           }
         `}
       </style>
@@ -80,14 +73,23 @@ const MerchSection = () => {
               <h3 className="text-2xl font-semibold text-yellow-400 mt-4">{product.name}</h3>
               <p className="text-white mt-2">{product.description}</p>
               <p className="text-yellow-400 font-bold mt-2">{product.price}</p>
-              <a
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block mt-4 bg-yellow-400 text-black font-semibold py-2 px-4 rounded hover:bg-yellow-500 transition-colors"
-              >
-                Inquire
-              </a>
+              {product.isAvailable ? (
+                <a
+                  href={whatsappLink(product.name)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block mt-4 bg-yellow-400 text-black font-semibold py-2 px-4 rounded hover:bg-yellow-500 transition-colors"
+                >
+                  Inquire
+                </a>
+              ) : (
+                <button
+                  disabled
+                  className="block mt-4 bg-gray-500 text-black font-semibold py-2 px-4 rounded cursor-not-allowed"
+                >
+                  Unavailable
+                </button>
+              )}
             </div>
           ))}
         </div>
