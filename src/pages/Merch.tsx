@@ -24,7 +24,7 @@ const products = [
     id: 3,
     name: 'Signature Hoodie',
     description: 'Very Rare hoodie',
-    price: 'KES 1,500',
+    price: 'KES 1,850',
     image: '/lovable-uploads/Hoodie 1.png',
     isAvailable: true,
   },
@@ -32,7 +32,7 @@ const products = [
     id: 4,
     name: 'Very Rare Hoodie',
     description: 'Bold hoodie .',
-    price: 'KES 1,500',
+    price: 'KES 1,850',
     image: '/lovable-uploads/Hoodie 2.png',
     isAvailable: true,
   },
@@ -40,14 +40,22 @@ const products = [
     id: 5,
     name: 'Premium Hoodie',
     description: 'Luxury hoodie ',
-    price: 'KES 1,500',
+    price: 'KES 1,850',
     image: '/lovable-uploads/Hoodie 3.png',
     isAvailable: true,
   },
+    {
+    id: 6,
+    name: 'Rare Hoodie',
+    description: 'Classic hoodie ',
+    price: 'KES 1,850',
+    image: '/lovable-uploads/Hoodie 4.png',
+    isAvailable: true,
+  }
 ];
 
 const MerchPage = () => {
-  const whatsappNumber = '<your_whatsapp_number>'; // Replace with your WhatsApp number
+  const whatsappNumber = '<+254712890778>'; // Replace with your WhatsApp number
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi! I'm interested in your merch.`;
 
   return (

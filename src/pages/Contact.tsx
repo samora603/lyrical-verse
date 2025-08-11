@@ -155,6 +155,7 @@ const Contact = () => {
 
               {/* Social Media */}
               <div className="space-y-8">
+                {/* Follow Me */}
                 <div className="bg-gray-900 rounded-lg p-8 border border-yellow-500/20">
                   <h2 className="text-2xl font-bold text-yellow-400 mb-6 font-montserrat">Follow Me</h2>
                   <div className="space-y-4">
@@ -185,7 +186,23 @@ const Contact = () => {
                     </a>
                   </div>
                 </div>
+
+                {/* Record Label */}
+                <div className="bg-gray-900 rounded-lg p-8 border border-yellow-500/20">
+                  <h2 className="text-2xl font-bold text-yellow-400 mb-4 font-montserrat">Record Label</h2>
+                  <p className="text-white mb-2">
+                    Signed to <span className="text-yellow-400 font-semibold">iii Records</span>
+                  </p>
+                  <a 
+                    href="https://xyzrecords.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-yellow-400 hover:underline"
+                  >
+                  </a>
+                </div>
               </div>
+
 
             </div>
           </div>
