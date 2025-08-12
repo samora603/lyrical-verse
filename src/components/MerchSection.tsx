@@ -13,7 +13,7 @@ const featuredProducts = [
     id: 3,
     name: 'Signature Hoodie',
     description: 'Cozy hoodie',
-    price: 'KES 1,500',
+    price: 'KES 1,850',
     image: '/lovable-uploads/Hoodie 1.png',
     isAvailable: true,
   },
@@ -21,7 +21,7 @@ const featuredProducts = [
     id: 4,
     name: 'Very Rare Hoodie',
     description: 'Bold hoodie',
-    price: 'KES 1,500',
+    price: 'KES 1,850',
     image: '/lovable-uploads/Hoodie 2.png',
     isAvailable: true, // example out-of-stock
   },
