@@ -12,7 +12,7 @@ const MusicSection = () => {
   };
 
   const tracks = [
-    { id: 1, title: "SiingiziiP", platform: 'track1' },
+    { id: 1, title: "Siingizii", platform: 'track1' },
     { id: 2, title: "MASHALLAH (feat. Gizmo)", platform: 'track2' },
     { id: 3, title: "aura reloaded", platform: 'track3' },
     { id: 4, title: "broker", platform: 'track4' },
