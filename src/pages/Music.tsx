@@ -6,15 +6,9 @@ import { FaSpotify, FaYoutube, FaApple, FaHeadphones } from 'react-icons/fa';
 const Music = () => {
 const singleTrackNames = [
   "Siingizii",
-  "Broker",
   "Mambo ya Dunia (feat. Gizmo & Odhil3) ",
-  "Forgetful",
   "Steeze",
   "MASHALLAH(feat. Gizmo)",
-  "ugly",
-  "aura reloaded",
-  "lighter",
-  "check yourself"
 ];
 
 const singles = singleTrackNames.map((title, i) => ({
