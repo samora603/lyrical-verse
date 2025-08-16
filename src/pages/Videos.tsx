@@ -6,30 +6,36 @@ const Videos = () => {
   const videos = [
     {
       id: 1,
-      title: "Odhil3 - Latest Rap Track",
+      title: "Main Course",
+      youtubeId: "https://www.youtube.com/watch?v=nQyFj5ZzCYg&list=RDnQyFj5ZzCYg&start_radio=1",
+      caption: "Exclusive release"
+    },
+    {
+      id: 2,
+      title: "Steeze",
       youtubeId: "https://www.youtube.com/watch?v=UBg4yTmFOlE&list=RDUBg4yTmFOlE&start_radio=1",
       caption: "Official music video release"
     },
     {
-      id: 2,
+      id: 3,
       title: "MASHALLAH (feat. Gizmo)",
       youtubeId: "https://www.youtube.com/watch?v=4T2RDCpQNQs&list=RD4T2RDCpQNQs&start_radio=1",
       caption: "Studio sessions and production"
     },
     {
-      id: 3,
+      id: 4,
       title: "aura reloaded",
       youtubeId: "https://www.youtube.com/watch?v=_WOFBLoT4q0&list=RD_WOFBLoT4q0&start_radio=1",
       caption: "Live performance energy"
     },
     {
-      id: 4,
+      id: 5,
       title: "broker",
       youtubeId: "https://www.youtube.com/watch?v=TP-rt6H1SLY&list=RDTP-rt6H1SLY&start_radio=1",
       caption: "Deep dive into the lyrics"
     },
     {
-      id: 5,
+      id: 6,
       title: "Mambo ya Dunia",
       youtubeId: "https://www.youtube.com/watch?v=aN4_0ueavAM&list=RDaN4_0ueavAM&start_radio=1",
       caption: "Deep dive into the lyrics"
