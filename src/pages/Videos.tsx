@@ -6,39 +6,39 @@ const Videos = () => {
   const videos = [
     {
       id: 1,
-      title: "Main Course",
-      youtubeId: "https://www.youtube.com/watch?v=nQyFj5ZzCYg&list=RDnQyFj5ZzCYg&start_radio=1",
-      caption: "Exclusive release"
+      title: "Odhil3 - ANADHANI (Official Music Video)",
+      youtubeId: "https://www.youtube.com/watch?v=tZsQRs_yQeE&list=RDtZsQRs_yQeE&start_radio=1",
+      // caption: "Exclusive release"
     },
     {
       id: 2,
-      title: "Steeze",
-      youtubeId: "https://www.youtube.com/watch?v=UBg4yTmFOlE&list=RDUBg4yTmFOlE&start_radio=1",
-      caption: "Official music video release"
+      title: "RARE - Odhil3 ft Jamzey M50 (Official Music Video)",
+      youtubeId: "https://www.youtube.com/watch?v=4OLxp_eMBmU",
+      // caption: "Official music video release"
     },
     {
       id: 3,
-      title: "MASHALLAH (feat. Gizmo)",
-      youtubeId: "https://www.youtube.com/watch?v=4T2RDCpQNQs&list=RD4T2RDCpQNQs&start_radio=1",
-      caption: "Studio sessions and production"
+      title: "Odhil3 - Main Course (Official Music Video)",
+      youtubeId: "https://www.youtube.com/watch?v=nQyFj5ZzCYg",
+      // caption: "Studio sessions and production"
     },
     {
       id: 4,
-      title: "aura reloaded",
-      youtubeId: "https://www.youtube.com/watch?v=_WOFBLoT4q0&list=RD_WOFBLoT4q0&start_radio=1",
-      caption: "Live performance energy"
+      title: "Steeze - Odhil3(Visualizer)",
+      youtubeId: "https://www.youtube.com/watch?v=UBg4yTmFOlE",
+      // caption: "Live performance energy"
     },
     {
       id: 5,
-      title: "broker",
-      youtubeId: "https://www.youtube.com/watch?v=TP-rt6H1SLY&list=RDTP-rt6H1SLY&start_radio=1",
-      caption: "Deep dive into the lyrics"
+      title: "MASHALLAH (feat. Gizmo)",
+      youtubeId: "https://www.youtube.com/watch?v=4T2RDCpQNQs&list=RD4T2RDCpQNQs&start_radio=1",
+      // caption: "Deep dive into the lyrics"
     },
     {
       id: 6,
       title: "Mambo ya Dunia",
       youtubeId: "https://www.youtube.com/watch?v=aN4_0ueavAM&list=RDaN4_0ueavAM&start_radio=1",
-      caption: "Deep dive into the lyrics"
+      // caption: "Deep dive into the lyrics"
     }
   ];
 
@@ -102,7 +102,7 @@ const Videos = () => {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-yellow-400 mb-2 font-montserrat">{video.title}</h3>
-                    <p className="text-gray-300">{video.caption}</p>
+                    {/* <p className="text-gray-300">{video.caption}</p> */}
                   </div>
                 </a>
               ))}

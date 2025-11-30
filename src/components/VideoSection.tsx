@@ -4,31 +4,31 @@ const VideoSection = () => {
   const videos = [
     {
       id: 1,
-      title: "Odhil3 - Latest Rap Track",
-      youtubeUrl: "https://www.youtube.com/watch?v=UBg4yTmFOlE",
-      embedId: "UBg4yTmFOlE",
-      caption: "Official music video release"
+      title: "Odhil3 - ANADHANI (Official Music Video)",
+      youtubeUrl: "https://www.youtube.com/watch?v=tZsQRs_yQeE&list=RDtZsQRs_yQeE&start_radio=1",
+      embedId: "tZsQRs_yQeE",
+      // caption: "Official music video release"
     },
     {
       id: 2,
-      title: "MASHALLAH (feat. Gizmo)",
-      youtubeUrl: "https://www.youtube.com/watch?v=4T2RDCpQNQs",
-      embedId: "4T2RDCpQNQs",
-      caption: "Studio sessions and production"
+      title: "RARE - Odhil3 ft Jamzey M50 (Official Music Video)",
+      youtubeUrl: "https://www.youtube.com/watch?v=4OLxp_eMBmU&list=RD4OLxp_eMBmU&start_radio=1",
+      embedId: "4OLxp_eMBmU",
+      // caption: "Studio sessions and production"
     },
     {
       id: 3,
-      title: "Aura Reloaded",
-      youtubeUrl: "https://www.youtube.com/watch?v=_WOFBLoT4q0",
-      embedId: "_WOFBLoT4q0",
-      caption: "Live performance energy"
+      title: "Odhil3 - Main Course (Official Music Video)",
+      youtubeUrl: "https://www.youtube.com/watch?v=nQyFj5ZzCYg&list=RDnQyFj5ZzCYg&start_radio=1",
+      embedId: "nQyFj5ZzCYg",
+      // caption: "Live performance energy"
     },
     {
       id: 4,
-      title: "Broker",
-      youtubeUrl: "https://www.youtube.com/watch?v=TP-rt6H1SLY",
-      embedId: "TP-rt6H1SLY",
-      caption: "Deep dive into the lyrics"
+      title: "Steeze - Odhil3(Visualizer)",
+      youtubeUrl: "https://www.youtube.com/watch?v=UBg4yTmFOlE&list=RDUBg4yTmFOlE&start_radio=1",
+      embedId: "UBg4yTmFOlE",
+      // caption: "Deep dive into the lyrics"
     }
   ];
 
@@ -58,7 +58,7 @@ const VideoSection = () => {
                 ></iframe>
               </div>
               <h3 className="text-xl font-bold text-yellow-400 mb-2">{video.title}</h3>
-              <p className="text-gray-300 mb-4">{video.caption}</p>
+              {/* <p className="text-gray-300 mb-4">{video.caption}</p> */}
               <a
                 href={video.youtubeUrl}
                 target="_blank"

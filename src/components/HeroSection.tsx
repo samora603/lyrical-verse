@@ -15,7 +15,7 @@ const HeroSection = () => {
     <section 
       id="home"
       className="h-screen w-screen flex items-center justify-center relative pt-16 px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/lovable-uploads/background.png')" }}
+      style={{ backgroundImage: "url('/lovable-uploads/image 3.png')" }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div> 
 
@@ -80,14 +80,14 @@ const HeroSection = () => {
         </div>
 
         {/* Pre-Save Button */}
-        <a
+        {/* <a
           href={socialLinks.preSave}
           target="_blank"
           rel="noopener noreferrer"
           className="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-600 text-black px-6 py-3 rounded-full text-base font-bold transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/25 hover:scale-105"
         >
           Pre-Save Now
-        </a>
+        </a> */}
       </div>
     </section>
   );
