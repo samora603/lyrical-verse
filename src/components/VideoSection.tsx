@@ -25,9 +25,9 @@ const VideoSection = () => {
     },
     {
       id: 4,
-      title: "Steeze - Odhil3(Visualizer)",
-      youtubeUrl: "https://www.youtube.com/watch?v=UBg4yTmFOlE&list=RDUBg4yTmFOlE&start_radio=1",
-      embedId: "UBg4yTmFOlE",
+      title: "OWADA-53 ft ​@Mnichwezzz @Spotboimafia (OFFICIAL 4k MUSIC VIDEO -Dir Trenzy)",
+      youtubeUrl: "https://www.youtube.com/watch?v=opcKTmZrxe0",
+      embedId: "opcKTmZrxe0",
       // caption: "Deep dive into the lyrics"
     }
   ];

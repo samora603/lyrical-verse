@@ -15,7 +15,7 @@ const HeroSection = () => {
     <section 
       id="home"
       className="h-screen w-screen flex items-center justify-center relative pt-16 px-4 bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/lovable-uploads/image 3.png')" }}
+      style={{ backgroundImage: "url('/lovable-uploads/Background.png')" }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 z-0"></div> 
 

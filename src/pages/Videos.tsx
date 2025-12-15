@@ -6,8 +6,8 @@ const Videos = () => {
   const videos = [
     {
       id: 1,
-      title: "Odhil3 - ANADHANI (Official Music Video)",
-      youtubeId: "https://www.youtube.com/watch?v=tZsQRs_yQeE&list=RDtZsQRs_yQeE&start_radio=1",
+      title: "OWADA-53 ft ​@Mnichwezzz @Spotboimafia (OFFICIAL 4k MUSIC VIDEO -Dir Trenzy)",
+      youtubeId: "https://www.youtube.com/watch?v=opcKTmZrxe0",
       // caption: "Exclusive release"
     },
     {
@@ -36,8 +36,8 @@ const Videos = () => {
     },
     {
       id: 6,
-      title: "Mambo ya Dunia",
-      youtubeId: "https://www.youtube.com/watch?v=aN4_0ueavAM&list=RDaN4_0ueavAM&start_radio=1",
+      title: "Odhil3 - ANADHANI (Official Music Video)",
+      youtubeId: "https://www.youtube.com/watch?v=tZsQRs_yQeE&list=RDtZsQRs_yQeE&start_radio=1",
       // caption: "Deep dive into the lyrics"
     }
   ];
