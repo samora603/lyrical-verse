@@ -15,7 +15,8 @@ const Navbar = () => {
     { path: '/music', label: 'Music' },
     { path: '/videos', label: 'Videos' },
     { path: '/merch', label: 'Merch' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/contact', label: 'Contact' },
+    { path: '/53', label: '53' }
   ];
 
   return (

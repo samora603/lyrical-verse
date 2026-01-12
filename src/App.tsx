@@ -9,6 +9,7 @@ import Videos from "./pages/Videos";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ThankYou from "./pages/ThankYou";
+import FiftyThree from "./pages/FiftyThree";
 import Merch from "./pages/Merch"; // ✅ Fixed import path
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/thank-you" element={<ThankYou />} />
           <Route path="/merch" element={<Merch />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/53" element={<FiftyThree />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
