@@ -8,8 +8,8 @@ const FiftyThree: React.FC = () => {
     <div className="bg-black text-white min-h-screen">
       <CollabHero />
       <CollabAlbums />
-      <CollabGallery />
-      <CollabShorts />
+      {/* <CollabGallery /> */}
+      {/* <CollabShorts /> */}
     </div>
   );
 };
