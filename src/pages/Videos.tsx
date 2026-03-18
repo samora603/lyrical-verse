@@ -6,15 +6,15 @@ const Videos = () => {
   const videos = [
     {
       id: 1,
-      title: "OWADA-53 ft ​@Mnichwezzz @Spotboimafia (OFFICIAL 4k MUSIC VIDEO -Dir Trenzy)",
-      youtubeId: "https://www.youtube.com/watch?v=opcKTmZrxe0",
+      title: "Odhil3- MZIZA (OFFICIAL MUSIC VIDEO) FT JamzeyM50 ,GIZMO",
+      youtubeId: "https://www.youtube.com/watch?v=VquTLl4Z2dI",
       // caption: "Exclusive release"
     },
     {
-      id: 2,
-      title: "RARE - Odhil3 ft Jamzey M50 (Official Music Video)",
-      youtubeId: "https://www.youtube.com/watch?v=4OLxp_eMBmU",
-      // caption: "Official music video release"
+      id: 1,
+      title: "OWADA-53 ft ​@Mnichwezzz @Spotboimafia (OFFICIAL 4k MUSIC VIDEO -Dir Trenzy)",
+      youtubeId: "https://www.youtube.com/watch?v=opcKTmZrxe0",
+      // caption: "Exclusive release"
     },
     {
       id: 3,
@@ -30,9 +30,9 @@ const Videos = () => {
     },
     {
       id: 5,
-      title: "MASHALLAH (feat. Gizmo)",
-      youtubeId: "https://www.youtube.com/watch?v=4T2RDCpQNQs&list=RD4T2RDCpQNQs&start_radio=1",
-      // caption: "Deep dive into the lyrics"
+      title: "RARE - Odhil3 ft Jamzey M50 (Official Music Video)",
+      youtubeId: "https://www.youtube.com/watch?v=4OLxp_eMBmU",
+      // caption: "Official music video release"  
     },
     {
       id: 6,
