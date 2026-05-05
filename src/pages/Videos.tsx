@@ -6,8 +6,8 @@ const Videos = () => {
   const videos = [
     {
       id: 1,
-      title: "Odhil3- MZIZA (OFFICIAL MUSIC VIDEO) FT JamzeyM50 ,GIZMO",
-      youtubeId: "https://www.youtube.com/watch?v=VquTLl4Z2dI",
+      title: "ODHIL3- WHENEVER (OFFICIAL 4k MUSIC VIDEO )",
+      youtubeId: "https://www.youtube.com/watch?v=odsD2O92xOw",
       // caption: "Exclusive release"
     },
     {
@@ -39,6 +39,12 @@ const Videos = () => {
       title: "Odhil3 - ANADHANI (Official Music Video)",
       youtubeId: "https://www.youtube.com/watch?v=tZsQRs_yQeE&list=RDtZsQRs_yQeE&start_radio=1",
       // caption: "Deep dive into the lyrics"
+    },
+    {
+      id: 7,
+      title: "Odhil3- MZIZA (OFFICIAL MUSIC VIDEO) FT JamzeyM50 ,GIZMO",
+      youtubeId: "https://www.youtube.com/watch?v=VquTLl4Z2dI",
+      // caption: "Exclusive release"
     }
   ];
 
@@ -60,7 +66,7 @@ const Videos = () => {
             {/* Featured Video */}
             <div className="mb-16">
               <div className="bg-gray-900 rounded-lg p-6 border border-yellow-500/20">
-                <h2 className="text-2xl font-bold text-yellow-400 mb-6 text-center font-montserrat">Featured Video</h2>
+                <h2 className="text-2xl font-bold text-yellow-400 mb-6 text-center font-montserrat">Latest Video</h2>
                 <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center">
                   <iframe
                     width="100%"
